@@ -1,0 +1,20 @@
+Bucket Encryption Reporting
+crypt_check.py checks all buckets that is has access to for compliance with the
+policies described on
+https://aws.amazon.com/blogs/security/how-to-prevent-uploads-of-unencrypted-objects-to-amazon-s3/,
+which deny uploading non-encrypted files. Additional checks could be performed and are documented
+in the comments of the python script.
+
+You must configure your aws cli environment with credentials. The script takes no command line arguments.
+An example of using the script and its output showing the 3 possible outcomes of the check:
+
+$ python3 crypt_check.py
+
+bucket: cloudtrail-logs
+In violation of encryption enforcement policy, insufficient policy statements
+
+bucket: templates
+In violation of encryption enforcement policy, no policy applied
+
+bucket: customerbilling
+Complies with encrytpion enforcement policy
