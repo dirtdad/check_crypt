@@ -18,3 +18,5 @@ In violation of encryption enforcement policy, no policy applied
 
 bucket: customerbilling
 Complies with encrytpion enforcement policy
+
+Available as a docker image on dockerhub as dirtdad/check_crypt.
